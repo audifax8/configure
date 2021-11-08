@@ -1,0 +1,36 @@
+<div class="example-action-buttons">
+  <button mat-button (click)="accordion?.openAll()">Expand All</button>
+  <button mat-button (click)="accordion?.closeAll()">Collapse All</button>
+</div>
+<mat-accordion class="example-headers-align" multi>
+  <mat-expansion-panel [expanded]="true">
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        {{caLinningColor.name}}
+      </mat-panel-title>
+      <mat-panel-description>
+        {{caLinningColor.description}}
+      </mat-panel-description>
+    </mat-expansion-panel-header>
+      <div *ngFor="let av of caLinningColor.values">
+        <app-swatch [av]="av" [ca]="caLinningColor"></app-swatch>
+      </div>
+  </mat-expansion-panel>
+
+  <mat-expansion-panel [expanded]="true">
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        {{caSticker2.name}}
+      </mat-panel-title>
+      <mat-panel-description>
+        {{caSticker2.description}}
+      </mat-panel-description>
+    </mat-expansion-panel-header>
+    <div [ngClass]="{'swatch-card' : true}">
+      <div *ngFor="let av of caSticker2.values.slice(0,4)">
+        <app-swatch [av]="av" [ca]="caSticker2" swatchType="card"></app-swatch>
+      </div>
+    </div>
+  </mat-expansion-panel>
+
+</mat-accordion>

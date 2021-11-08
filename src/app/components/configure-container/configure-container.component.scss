@@ -1,0 +1,35 @@
+.configure-container {
+  //border: 1px red solid;
+  max-width: 80%;
+  max-height: 100vh;
+  margin: 0 auto;
+  position: relative;
+  display: flex;
+}
+
+.left-container {
+  width: 70%;
+  //border: 1px blue solid;
+  display: flex;
+}
+
+.rigth-container {
+  width: 30%;
+  //border: 1px purple solid;
+}
+
+::ng-deep.configure-display-carousel {
+  margin: 20px;
+}
+
+.app-product-display {
+  position: relative;
+  width: 85%;
+  margin: 0 auto;
+}
+
+::ng-deep.carousel-dots {
+  position: relative;
+  bottom: 150px;
+}
+

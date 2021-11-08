@@ -1,0 +1,19 @@
+<mat-card class="example-card" *ngIf="swatchType === 'card' && av?.name !== 'None'">
+  <mat-card-title-group>
+    <mat-card-title>{{av.name}}</mat-card-title>
+    <!--<div mat-card-sm-image [ngStyle]="{'background-color': av.color}" ></div>-->
+    <img mat-card-sm-image [src]="av?.url" />
+  </mat-card-title-group>
+  <mat-card-content>
+    {{av.description}}
+  </mat-card-content>
+  <mat-card-actions>
+    <button mat-raised-button color="primary" (click)="click()">select</button>
+  </mat-card-actions>
+</mat-card>
+<div class="example-button-container" *ngIf="swatchType !== 'card'">
+  <button mat-mini-fab [ngStyle]="{'background-color': av.color}" (click)="click()">
+    <!--<mat-icon>plus_one</mat-icon>-->
+  </button>
+</div>
+<!--<pre>{{av | json}}</pre>-->
